@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head id="head">
+    <title>Contract Page</title>
+    <meta name="description" content="CONTRACT INFO">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./JAVASCRIPT/java.js"></script>
+</head>
+
+<body>
+<header id="header"></header> <!--loads header from seperate file  -->
+<main class="grid4">
+    <section class="contact">
+        <div>
+            <h1>Costumer Support</h1>
+        </div>
+    </section>
+    <section class="facebook">
+        <div>
+    <h2>@Facebook</h2>
+            <a href="https://www.facebook.com/nintendoofcanada/"><img src="./IMG/facebook.jpg" alt="fackbook link"> </a>
+</div>
+    </section>
+    <section class="twitter">
+    <div>
+        <h2>@Twitter</h2>
+        <a href="https://twitter.com/NintendoAmerica?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src="./IMG/twitter.jpg" alt="twitter link"> </a>
+    </div>
+</section>
+    <section class="forms">
+        <div>
+            <h2>Official Forms</h2>
+            <a href="https://en-americas-support.nintendo.com/">Nintendo Forms</a>
+        </div>
+    </section>
+    <section class="number">
+        <div>
+            <h2>Support number</h2>
+            <p>In the US or Canada: 1(800)255-3700</p>
+            <p>Outside the US or Canada: 1(855)548-4693
+            <p>Use TTD service? Dial 711</p>
+        </div>
+    </section>
+    <section class="ticket">
+        <div>
+            <h2>Send in ticket</h2> <!--user can input information  -->
+
+            <form action="/random_page.php" method="post">
+                <p>First name: <input type="text"></p>
+                <p>Last name: <input type="text"></p>
+                <p>Home Number: <input type="tel"></p>
+                <p>Mobile Number: <input type="tel"></p>
+                <p>Email: <input type="email"></p>
+                <label>Problem:</label>
+                <select name="problems"> <!-- drop down menu -->
+                    <option value="p1">Account</option>
+                    <option value="p2">Payment</option>
+                    <option value="p3">Technical </option>
+                    <option value="p4">Other</option>
+                </select>
+                <p>Short Describing of Problem</p> <!-- allows user to enter a short description -->
+                <textarea rows="10" cols="30"></textarea><br>
+                <input type="submit">
+            </form>
+        </div>
+    </section>
+
+
+</main>
+<footer id="footer"></footer> <!-- loads footer from seperate file -->
+
+
+</body>
+
+</html>

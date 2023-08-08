@@ -1,0 +1,506 @@
+body{
+    margin: 0;
+}
+
+
+/* -------------Header--------------- */
+header{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    background-color: #e50012;
+}
+.logo{
+    height:100%;
+    flex-grow: 1;
+}
+
+.logo img{
+    height: 100%;
+    width:auto;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+}
+header nav ul li{
+     padding: 0px 15px;
+
+ }
+header nav ul li a{
+     color: white;
+     font-size: 20px ;
+    font-family: 'Roboto', sans-serif;
+
+ }
+
+/* ----------Home Page------------- */
+.grid1 {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "video video"
+        "content content";
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    height:90vh;
+}
+
+.grid1>section:nth-child(1) { /*put embedded youtube ad into the center of screen */
+    display: grid;
+    grid-area: video;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 100%;
+    margin: 0;
+    padding: 10px 10px;
+}
+
+.grid1>section:nth-child(1)>div {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 10px 10px;
+    background-color: black;
+}
+
+.grid1>section:nth-child(1)>div>iframe {
+    display: grid;
+    margin: 0 auto;
+}
+
+.grid1>section:nth-child(2){
+    display: grid;
+    grid-area: content;
+    align-items: center;
+    justify-content: center;
+
+}
+.grid1>section:nth-child(2)>div>h1{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 30px;
+    font-family: 'Bangers', cursive;
+}
+.grid1>section:nth-child(2)>div>p{
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Oswald', sans-serif;
+}
+/* ----------Company Page------------------*/
+.grid2 {
+    display: grid;
+    grid-template-columns: 25% 45% 25%;
+    grid-template-areas: /*sets it up so text is in middle of screen surrounded by images */
+        "picture1 compcontent picture2"
+        "picture3 compcontent picture4"
+        "picture5 compcontent picture6"
+        "picture7 compcontent picture8";
+    grid-template-rows:auto;
+    margin: 0;
+
+
+}
+.grid2 .mission{
+    display: grid;
+    grid-area: compcontent;
+    justify-content: center;
+    text-align: center;
+    border: 3.5px solid blue;
+}
+.grid2 .mission>div>h1{
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+.grid2 .mission>div>p{
+    padding: 50px;
+    font-size: 30px;
+    margin: 50px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+
+
+.grid2 .pic1 > img {
+  height: 100%;
+    width: 100%;
+
+}
+.grid2 .pic2 > img {
+    height: 100%;
+    width: 100%;
+
+}
+.grid2 .pic3 > img {
+    height: 100%;
+    width: 100%;
+
+}
+.grid2 .pic4 > img {
+    height: 100%;
+    width: 100%;
+
+}
+.grid2 .pic5 > img {
+    height: 100%;
+    width: 100%;
+
+}
+.grid2 .pic6 > img {
+    height: 100%;
+    width: 100%;
+
+}
+.grid2 .pic7 > img {
+    height: 100%;
+    width: 100%;
+
+}
+.grid2 .pic8 > img {
+    height: 100%;
+    width: 100%;
+
+}
+
+/* used  height:25vh for each picture to take up 25% of the view height on each side */
+.grid2 .pic1{
+    display: grid;
+    grid-area: picture1 ;
+    justify-content: center;
+    overflow: hidden; /* stops image from overflowing in content*/
+    height:25vh;
+    width: auto;
+}
+.grid2 .pic2{
+    display: grid;
+    grid-area: picture2 ;
+    justify-content: center;
+    overflow: hidden; /* stops image from overflowing in content*/
+    height:25vh;
+    width: auto;
+}
+.grid2 .pic3{
+    display: grid;
+    grid-area: picture3 ;
+    justify-content: center;
+    overflow: hidden; /* stops image from overflowing in content*/
+    height:25vh;
+    width: auto;
+}
+.grid2 .pic4{
+    display: grid;
+    grid-area: picture4;
+    justify-content: center;
+    overflow: hidden; /* stops image from overflowing in content*/
+    height:25vh;
+    width: auto;
+}
+.grid2 .pic5{
+    display: grid;
+    grid-area: picture5;
+    justify-content: center;
+    overflow: hidden; /* stops image from overflowing in content*/
+    height:25vh;
+    width: auto;
+}
+.grid2 .pic6{
+    display: grid;
+    grid-area: picture6;
+    justify-content: center;
+    overflow: hidden; /* stops image from overflowing in content*/
+    height:25vh;
+    width: auto;
+}
+.grid2 .pic7{
+    display: grid;
+    grid-area: picture7;
+    justify-content: center;
+    overflow: hidden; /* stops image from overflowing in content*/
+    height:25vh;
+    width: auto;
+}
+.grid2 .pic8{
+    display: grid;
+    grid-area: picture8;
+    justify-content: center;
+    overflow: hidden; /* stops image from overflowing in content*/
+    height:25vh;
+    width: auto;
+}
+
+
+/* ----------Product Page----------*/
+.grid3 {
+    display: grid;  /*sets up to have text/picture row1, picture/text row2, text/picture row3 and picture/text row 4 with a set height for each row */
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "txt1 pic1"
+        "pic2 txt2"
+        "txt3 pic3"
+        "pic4 txt4";
+    grid-template-rows: 400px;
+
+    margin: 0;
+}
+.grid3>section {
+
+    overflow: hidden;
+    justify-content: center;
+
+}
+
+.grid3>section:nth-child(1),.grid3>section:nth-child(2),.grid3>section:nth-child(5),.grid3>section:nth-child(6){   /* Flips the colours for each row to highlight content easier */
+    background-color:  #e5eaf5;
+}
+.grid3>section:nth-child(3),.grid3>section:nth-child(4),.grid3>section:nth-child(7),.grid3>section:nth-child(8){
+    background-color: thistle;
+}
+
+.grid3>section:nth-child(1){
+    display: grid;
+    grid-area: txt1;
+}
+
+.grid3>section:nth-child(1)>div>h1,.grid3>section:nth-child(1)>div>p{
+    margin: 30px;
+    text-align: center;
+}
+
+.grid3>section:nth-child(1)>div>h1{
+    font-size: 25px;
+    font-family: 'Victor Mono', monospace;
+
+}
+.grid3>section:nth-child(1)>div>p{
+    font-size: 20px;
+}
+
+
+.grid3>section:nth-child(2){
+    display: grid;
+    grid-area: pic1;
+}
+
+.grid3>section:nth-child(2)>div>img,.grid3>section:nth-child(3)>div>img,.grid3>section:nth-child(6)>div>img,.grid3>section:nth-child(7)>div>img{
+    height:400px;
+    width:500px;
+
+}
+
+.grid3>section:nth-child(3) {
+    display: grid;
+    grid-area: pic2;
+}
+
+
+.grid3>section:nth-child(4){
+    display: grid;
+    grid-area: txt2;
+
+}
+.grid3>section:nth-child(4)>div>h2,.grid3>section:nth-child(4)>div>p{
+    margin: 30px;
+    text-align: center;
+}
+.grid3>section:nth-child(4)>div>h2{
+    font-size: 25px;
+    font-family: 'Victor Mono', monospace;
+
+}
+.grid3>section:nth-child(4)>div>p{
+    font-size: 20px;
+}
+
+.grid3>section:nth-child(5) {
+    display: grid;
+    grid-area: txt3;
+}
+.grid3>section:nth-child(5) .list{ /* Formats the column and adds 3 columns to put the lists in 3 columns */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    margin: 20px;
+    font-size: 18px;
+    grid-gap: 20px;
+    justify-content: center;
+}
+.grid3>section:nth-child(5)>div>h3,.grid3>section:nth-child(5)>div>ul{
+    margin: 30px;
+    text-align: center;
+}
+
+.grid3>section:nth-child(5)>div>h3{
+    font-size: 25px;
+    font-family: 'Victor Mono', monospace;
+
+}
+
+.grid3>section:nth-child(6) {
+    display: grid;
+    grid-area: pic3;
+
+}
+
+.grid3>section:nth-child(7) {
+    display: grid;
+    grid-area: pic4;
+
+}
+.grid3>section:nth-child(8) .list2{ /* Formats the column and adds 3 columns to put the lists in 3 columns */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    margin: 20px;
+    font-size: 18px;
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+.grid3>section:nth-child(8) {
+    display: grid;
+    grid-area: txt4;
+}
+.grid3>section:nth-child(8)>div>h4,.grid3>section:nth-child(8)>div>ul{
+    margin: 30px;
+    text-align: center;
+}
+.grid3>section:nth-child(8)>div>ul{
+    font-size: 20px;
+}
+.grid3>section:nth-child(8)>div>h4{
+    font-size: 25px;
+    font-family: 'Victor Mono', monospace;
+
+}
+
+/* ----------contact page--------------- */
+.grid4 {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 3fr 2fr 2fr 4fr; /* formats the rows to be a certain size */
+    grid-template-areas:
+        "contact contact"
+        "facebook twitter"
+        "forms number"
+        "support support";
+    margin: 0;
+background-image: url("../IMG/star_outlines.jpg"); /* sets a picture as background, sets it a certain size and repeats it over the back */
+    background-repeat: repeat;
+    background-size: 70px;
+    height:100vh;
+}
+.grid4 h1{
+    font-size: 75px;
+background-color: white;
+    border: 2px solid blue;
+}
+.grid4 h2{
+    font-size: 30px;
+}
+.grid4 .contact{
+    display: grid;
+    grid-area: contact;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.grid4 .facebook{
+    display: grid;
+    grid-area: facebook;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+.grid4 .facebook>div{
+background-color: white;
+    padding: 12px;
+    border: 0.9px solid blue;
+
+}
+.grid4 .facebook>div>a>img{
+    height: 100px;
+    width:auto;
+}
+.grid4 .twitter{
+    display: grid;
+    grid-area: twitter;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+.grid4 .twitter>div{
+    background-color: white;
+    padding: 12px;
+    border: 0.9px solid blue;
+}
+
+.grid4 .twitter>div>a>img{
+    height: 100px;
+    width:auto;
+}
+.grid4 .forms{
+    display: grid;
+    grid-area: forms;
+    text-align: center;
+    justify-content: center;
+    padding-top: 40px;
+}
+.grid4 .forms>div{
+    background-color: white;
+    padding: 12px;
+    border: 0.9px solid blue;
+}
+
+.grid4 .number{
+    display: grid;
+    grid-area: number;
+    text-align: center;
+    justify-content: center;
+    padding-top: 40px;
+}
+.grid4 .number>div{
+    background-color: white;
+    padding: 12px;
+    border: 0.9px solid blue;
+
+}
+.grid4 .ticket{
+    display: grid;
+    grid-area: support;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+.grid4 .ticket>div{
+    background-color: white;
+    padding: 12px;
+    border: 0.9px solid blue;
+}
+.grid4 .ticket>div>form{
+    justify-content: center;
+
+}
+
+
+
+
+/* ----------footer---------------*/
+
+footer {
+    background-color: darkgray;
+    bottom: 0;
+    width: 100%;
+    height: 6vh; /* Footer height */
+}
+footer>p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+
